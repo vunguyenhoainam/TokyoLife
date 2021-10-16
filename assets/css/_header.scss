@@ -1,0 +1,490 @@
+.header {
+  position: relative;
+
+  &-top {
+    max-width: 1170px;
+    margin: 0 auto;
+    border-bottom: 1px solid $gray_3;
+    @include mq_min_768 {
+      padding: 0 2.5rem;
+      border: 0;
+      @include flexbox(flex, space-between, center, nowrap);
+    }
+    @include mq_min_969 {
+      padding: 0 4rem;
+    }
+    @include mq_min_1200 {
+      padding: 0;
+    }
+    &-left {
+      display: none;
+      @include mq_min_768 {
+        display: block;
+      }
+    }
+    &-right {
+      display: flex;
+      flex-direction: column;
+      flex-flow: column-reverse;
+      text-align: center;
+      padding: 1.5rem 0;
+      @include mq_min_768 {
+        @include flexbox(flex, space-between, center, nowrap);
+        flex-direction: row;
+        padding: 0;
+      }
+      .account {
+        position: relative;
+        margin: 0 0 2rem 0;
+        cursor: pointer;
+        &:hover .popup-login {
+          opacity: 1;
+          visibility: inherit;
+        }
+        @include mq_min_768 {
+          margin: 0;
+          padding: 1.5rem 1rem;
+          border-left: 1px solid $gray_3;
+          border-right: 1px solid $gray_3;
+        }
+        i {
+          @include font(1rem, 700, normal);
+          margin: 0 0 0 5px;
+        }
+        .popup-login {
+          position: absolute;
+          top: 3.5rem;
+          left: 50%;
+          z-index: 2;
+          padding: 1rem;
+          transform: translateX(-50%);
+          background-color: $white;
+          opacity: 0;
+          visibility: hidden;
+          box-shadow: rgba(50, 50, 93, 0.25) 0px 6px 12px -2px,
+            rgba(0, 0, 0, 0.3) 0px 3px 7px -3px;
+          li {
+            a {
+              display: block;
+              padding: 1rem 2rem;
+              &:hover {
+                color: $red;
+              }
+            }
+          }
+          &::after {
+            position: absolute;
+            content: "";
+            top: -2rem;
+            left: 0;
+            width: 100%;
+            height: 4rem;
+          }
+          @include mq_min_768 {
+            width: 100%;
+            top: 5.5rem;
+          }
+        }
+      }
+      .store-list {
+        cursor: pointer;
+        @include mq_min_768 {
+          padding: 1.5rem 1rem;
+          border-left: 1px solid $gray_3;
+        }
+        i {
+          @include font(1rem, 700, normal);
+          margin: 0 0 0 5px;
+        }
+      }
+    }
+  }
+  &-banner {
+    width: 100%;
+    margin: 0 auto;
+    font-size: 0;
+    display: none;
+    @include mq_min_768 {
+      display: block;
+    }
+  }
+  &-middle {
+    max-width: 1170px;
+    margin: 0 auto;
+    position: relative;
+    padding: 0 1.5rem;
+    @include mq_min_768 {
+      margin: 1rem auto 1rem;
+      padding: 0 2.5rem;
+    }
+    @include mq_min_969 {
+      margin: 1rem auto 1rem;
+      padding: 0 4rem;
+      @include flexbox(flex, space-between, center, nowrap);
+    }
+    @include mq_min_1200 {
+      padding: 0;
+    }
+    .logo {
+      max-width: 23rem;
+      margin: 0 auto;
+      padding: 1.5rem 0;
+      @include mq_min_768 {
+        margin: 0;
+      }
+    }
+    .form-search {
+      @include flexbox(flex, space-between, center, nowrap);
+      @include mq_min_768 {
+        flex-wrap: wrap;
+      }
+      @include mq_min_969 {
+        flex-wrap: nowrap;
+      }
+      .form-search-container {
+        width: 100%;
+        height: 4rem;
+        margin: 0 0.8rem 0 0;
+        @include flexbox(flex, space-between, center, nowrap);
+        @include mq_min_768 {
+          margin: 0;
+        }
+        .icon-mega-menu {
+          border: 2px solid $red;
+          padding: 1rem 1.2rem;
+          font-size: 1.6rem;
+          background-color: $gray_4;
+          @include mq_min_969 {
+            display: none;
+          }
+        }
+        .icon-search {
+          border: 2px solid $red;
+          padding: 1rem 1.2rem;
+          font-size: 1.6rem;
+          color: $white;
+          background-color: $red;
+        }
+        input {
+          width: 100%;
+          border: none;
+          border-top: 2px solid $red;
+          border-bottom: 2px solid $red;
+          padding: 1rem 1.5rem;
+          outline: none;
+          @include mq_min_969 {
+            display: block;
+            width: 38rem;
+            border-left: 2px solid $red;
+          }
+          @include mq_min_1200 {
+            width: 60rem;
+          }
+        }
+      }
+      .cart {
+        @include mq_min_969 {
+          width: 100%;
+          @include flexbox(flex, flex-start, center, nowrap);
+        }
+        .cart-container {
+          position: relative;
+          height: 4rem;
+          display: inline-block;
+          padding: 1.2rem;
+          font-size: 1.6rem;
+          color: $white;
+          background-color: $red;
+          @include mq_min_768 {
+            position: absolute;
+            top: 1rem;
+            right: 12rem;
+          }
+          @include mq_min_969 {
+            position: static;
+            margin: 0 2rem 0 10rem;
+          }
+          .notification {
+            @include flexbox(flex, center, center, nowrap);
+            position: absolute;
+            top: -8px;
+            right: -8px;
+            width: 20px;
+            height: 20px;
+            background-color: $white;
+            border-radius: 50%;
+            color: $gray_1;
+            font-size: 1.4rem;
+            font-weight: 500;
+            box-shadow: 0 0 3px $gray_3;
+            @include mq_min_768 {
+              display: none;
+            }
+          }
+        }
+        .info-cart {
+          display: none;
+          @include mq_min_768 {
+            display: block;
+            position: absolute;
+            top: 1rem;
+            right: 4rem;
+            @include font(1.3rem, 700, normal);
+          }
+          @include mq_min_969 {
+            position: static;
+          }
+        }
+      }
+    }
+  }
+  &-bottom {
+    max-width: 1170px;
+    margin: 0 auto;
+    overflow: hidden;
+    @include flexbox(flex, flex-start, center, nowrap);
+    @include mq_min_768 {
+      padding: 0 2.5rem;
+      position: static;
+    }
+    @include mq_min_969 {
+      padding: 0 4rem;
+    }
+    @include mq_min_1200 {
+      padding: 0;
+    }
+    &-left {
+      display: none;
+      @include mq_min_969 {
+        display: block;
+      }
+      margin-bottom: auto;
+      .list-child {
+        position: relative;
+        &:first-child {
+          background-color: $red;
+          color: $white;
+          i {
+            margin: 0 1rem 0 0.5rem;
+          }
+        }
+        &:hover .list-child-details {
+          opacity: 1;
+          visibility: inherit;
+        }
+        &::before {
+          position: absolute;
+          content: "";
+          top: 0;
+          right: -4rem;
+          z-index: 2;
+          width: 4rem;
+          height: 100%;
+        }
+        .list-child-title {
+          @include flexbox(flex, flex-start, center, nowrap);
+          width: 23rem;
+          padding: 1.5rem;
+          border-bottom: 1px solid $gray_4;
+          @include font(1.4rem, 500, normal);
+          cursor: pointer;
+          img {
+            width: 2.5rem;
+            height: 2.5rem;
+            margin-right: 0.5rem;
+            object-fit: cover;
+          }
+          i:not(i:first-child) {
+            @include font(1.2rem, 500, normal);
+            margin-left: auto;
+          }
+          &:hover {
+            color: $red;
+          }
+        }
+        .list-child-details {
+          display: none;
+          @include mq_min_969 {
+            @include flexbox(flex, space-between, flex-start, nowrap);
+            position: absolute;
+            top: 0;
+            left: 25rem;
+            z-index: 2;
+            background-color: $white;
+            padding: 2rem 1rem;
+            opacity: 0;
+            visibility: hidden;
+            box-shadow: rgba(50, 50, 93, 0.25) 0px 6px 12px -2px,
+              rgba(0, 0, 0, 0.3) 0px 3px 7px -3px;
+            .mega-list {
+              width: 15rem;
+              margin: 0 1rem;
+              .title-list {
+                @include font(1.3rem, 700, normal);
+                padding-bottom: 1.5rem;
+                border-bottom: 1px solid $gray_4;
+                cursor: pointer;
+                &:hover {
+                  color: $red;
+                }
+              }
+              a {
+                display: block;
+                padding-top: 1.5rem;
+                &:hover {
+                  color: $red;
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+    &-right {
+      width: 100%;
+      @include mq_min_969 {
+        width: calc(100% - 230px);
+        margin-bottom: auto;
+      }
+      .menu {
+        display: none;
+        @include mq_min_969 {
+          display: block;
+        }
+        ul {
+          @include flexbox(flex, space-between, center, nowrap);
+          .menu-item.active {
+            color: $red;
+          }
+          .menu-item {
+            padding: 1.5rem 1rem;
+            transition: color 0.4s ease;
+            cursor: pointer;
+            @include font(1.3rem, 700, normal);
+            @include mq_min_1200 {
+              @include font(1.6rem, 700, normal);
+            }
+            &:hover {
+              transition: color 0.4s ease;
+              color: $red;
+            }
+            .dropdown-extend {
+              display: none;
+            }
+          }
+        }
+      }
+      .popup-menu {
+        position: absolute;
+        top: 0;
+        left: 0;
+        z-index: 9;
+        width: 80%;
+        height: 300vh;
+        padding: 2rem;
+        overflow: hidden;
+        background-color: $white;
+        @include mq_min_768 {
+          width: 40%;
+        }
+        @include mq_min_969 {
+          display: none;
+        }
+        .popup-menu-item {
+          border-bottom: 1px solid $gray_4;
+          .title-menu-item {
+            padding: 1rem 0;
+            @include font(1.4rem, 700, normal);
+            @include flexbox(flex, space-between, center, nowrap);
+            .fas {
+              transition: all 0.2s ease;
+            }
+          }
+          .popup-dropdown-extend {
+            .mega-menu {
+              padding: 2rem;
+              .title {
+                @include font(1.4rem, 700, normal);
+                padding-bottom: 1rem;
+                border-bottom: 1px solid $gray_4;
+              }
+              a {
+                display: block;
+                padding-top: 2rem;
+              }
+            }
+          }
+        }
+      }
+      .slide-show {
+        position: relative;
+        margin: 2rem 0;
+        padding: 0 1.5rem;
+        @include mq_min_768 {
+          padding: 0;
+        }
+        @include mq_min_969 {
+          margin: 0;
+        }
+        .owl-nav {
+          .owl-prev {
+            position: absolute;
+            top: 50%;
+            left: 2rem;
+            transform: translateY(-50%);
+            width: 4rem;
+            height: 4rem;
+            border-radius: 50%;
+            background-color: $gray_2;
+            opacity: 0.5;
+            overflow: hidden;
+            @include flexbox(flex, center, center, nowrap);
+            span {
+              display: inline-block;
+              height: 180%;
+              font-size: 5rem;
+              color: $white;
+            }
+            &:active {
+              opacity: 0.8;
+            }
+          }
+          .owl-next {
+            position: absolute;
+            top: 50%;
+            right: 2rem;
+            transform: translateY(-50%);
+            width: 4rem;
+            height: 4rem;
+            border-radius: 50%;
+            background-color: $gray_2;
+            opacity: 0.5;
+            overflow: hidden;
+            @include flexbox(flex, center, center, nowrap);
+            span {
+              display: inline-block;
+              height: 180%;
+              font-size: 5rem;
+              color: $white;
+            }
+            &:active {
+              opacity: 0.8;
+            }
+          }
+        }
+        .owl-dots {
+          width: 100%;
+          position: absolute;
+          left: 50%;
+          transform: translateX(-50%);
+          bottom: 1.5rem;
+          .owl-dot.active {
+            span {
+              background-color: $red;
+            }
+          }
+        }
+      }
+    }
+  }
+}

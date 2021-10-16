@@ -1,0 +1,554 @@
+.body {
+  max-width: 1170px;
+  margin: 0 auto;
+  padding: 0 1.5rem;
+
+  @include mq_min_768 {
+    padding: 0 2.5rem;
+  }
+  @include mq_min_969 {
+    padding: 0 4rem;
+  }
+  @include mq_min_1200 {
+    padding: 0;
+  }
+
+  .intro-products {
+    margin: 0 -1.5rem;
+    a {
+      margin-top: 1.5rem;
+      display: block;
+      font-size: 0;
+      padding: 0 1.5rem;
+    }
+    @include mq_min_768 {
+      @include flexbox(flex, flex-start, flex-start, nowrap);
+      .products-left {
+        max-width: calc(100% / 3);
+      }
+      .products-right {
+        // max-width: calc(100% - (100% / 3));
+        flex: 1;
+        &-top {
+          @include flexbox(flex, flex-start, center, nowrap);
+          margin-bottom: 3rem;
+        }
+      }
+    }
+  }
+
+  .info-products {
+    .title-info-products {
+      @include flexbox(flex, flex-start, center, nowrap);
+      @include font(1.6rem, 700, normal);
+      margin: 3rem 0 1.5rem 0;
+      .title-info-products-new {
+        padding-bottom: 0.5rem;
+        border-bottom: 3px solid $red;
+      }
+      .title-info-products-sale {
+        margin-left: 2rem;
+        padding-bottom: 0.5rem;
+      }
+    }
+    .list-products {
+      text-align: center;
+      @include font(1.4rem, 700, normal);
+      // .product-item-img {}
+      .product-item-name {
+        margin: 1rem 0;
+      }
+      .product-item-price {
+        font-size: 1.6rem;
+        color: $red;
+      }
+    }
+
+    .banner-center {
+      a {
+        margin-top: 2.5rem;
+        display: block;
+        font-size: 0;
+      }
+    }
+  }
+
+  .products-container-1 {
+    margin-top: 3rem;
+    .title-product {
+      @include font(1.6rem, 700, normal);
+      @include flexbox(flex, space-between, center, nowrap);
+      @include mq_min_768 {
+        margin-bottom: 1.5rem;
+      }
+      h3 {
+        display: inline-block;
+        padding-bottom: 0.5rem;
+        border-bottom: 3px solid $red;
+      }
+      .option-change {
+        display: none;
+        @include mq_min_768 {
+          color: $gray_3;
+          @include font(1.2rem, 700, normal);
+          @include flexbox(flex, flex-end, flex-start, nowrap);
+          span {
+            margin: 0 0.5rem;
+          }
+          .active {
+            color: $red;
+          }
+          .option-change-arrow {
+            width: 3rem;
+            margin-left: 2rem;
+            @include font(1.8rem, 700, normal);
+            @include flexbox(flex, space-between, flex-start, nowrap);
+          }
+        }
+      }
+    }
+    .content {
+      @include mq_min_768 {
+        @include flexbox(flex, space-between, flex-start, nowrap);
+      }
+      .list-title {
+        margin: 2rem 0;
+        @include mq_min_768 {
+          margin: 0;
+        }
+        .title-item {
+          margin: 0.5rem 0;
+          word-wrap: break-word;
+          cursor: pointer;
+          &:hover {
+            color: $red;
+          }
+          @include mq_min_768 {
+            width: 16rem;
+            height: 100%;
+          }
+        }
+      }
+      .block-products {
+        margin: 0 -0.5rem;
+        display: flex;
+        flex-direction: column-reverse;
+        @include mq_min_969 {
+          display: block;
+        }
+        a {
+          display: block;
+          font-size: 0;
+          max-width: 50%;
+          padding: 0.5rem;
+        }
+        .block-products-top {
+          @include flexbox(flex, flex-start, center, wrap);
+          @include mq_min_768 {
+            margin: 2rem 0;
+          }
+          @include mq_min_969 {
+            @include flexbox(flex, space-between, center, nowrap);
+          }
+        }
+        .block-products-bottom {
+          display: none;
+          @include mq_min_768 {
+            @include flexbox(flex, space-between, center, nowrap);
+            a {
+              flex: 1;
+            }
+          }
+        }
+      }
+    }
+  }
+
+  .products-container-2 {
+    margin-top: 3rem;
+    .title-product {
+      @include font(1.6rem, 700, normal);
+      @include flexbox(flex, space-between, center, nowrap);
+      @include mq_min_768 {
+        margin-bottom: 1.5rem;
+      }
+      h3 {
+        display: inline-block;
+        padding-bottom: 0.5rem;
+        border-bottom: 3px solid $red;
+      }
+      .option-change {
+        display: none;
+        @include mq_min_768 {
+          color: $gray_3;
+          @include font(1.2rem, 700, normal);
+          @include flexbox(flex, flex-end, flex-start, nowrap);
+          span {
+            margin: 0 0.5rem;
+          }
+          .active {
+            color: $red;
+          }
+          .option-change-arrow {
+            width: 3rem;
+            margin-left: 2rem;
+            @include font(1.8rem, 700, normal);
+            @include flexbox(flex, space-between, flex-start, nowrap);
+          }
+        }
+      }
+    }
+    .content {
+      @include mq_min_768 {
+        @include flexbox(flex, space-between, flex-start, nowrap);
+      }
+      .list-title {
+        margin: 2rem 0;
+        @include mq_min_768 {
+          margin: 0;
+        }
+        .title-item {
+          margin: 0.5rem 0;
+          word-wrap: break-word;
+          cursor: pointer;
+          &:hover {
+            color: $red;
+          }
+          @include mq_min_768 {
+            width: 16rem;
+            height: 100%;
+          }
+        }
+      }
+      .block-products {
+        margin: 0 -0.5rem;
+        a {
+          display: block;
+          font-size: 0;
+          padding: 0.5rem;
+        }
+        @include mq_min_969 {
+          @include flexbox(flex, space-between, flex-start, nowrap);
+        }
+        .block-products-left {
+          display: none;
+          @include mq_min_969 {
+            display: block;
+            margin-right: 0.5rem;
+          }
+        }
+        .block-products-right {
+          @include flexbox(flex, flex-start, center, wrap);
+          margin: 0 -0.5rem;
+          a {
+            width: 50%;
+            @include mq_min_969 {
+              width: calc(100% / 3);
+            }
+          }
+        }
+      }
+    }
+  }
+
+  .products-container-3 {
+    margin-top: 3rem;
+    .title-product {
+      @include font(1.6rem, 700, normal);
+      @include flexbox(flex, space-between, center, nowrap);
+      @include mq_min_768 {
+        margin-bottom: 1.5rem;
+      }
+      h3 {
+        display: inline-block;
+        padding-bottom: 0.5rem;
+        border-bottom: 3px solid $red;
+      }
+      .option-change {
+        display: none;
+        @include mq_min_768 {
+          color: $gray_3;
+          @include font(1.2rem, 700, normal);
+          @include flexbox(flex, flex-end, flex-start, nowrap);
+          span {
+            margin: 0 0.5rem;
+          }
+          .active {
+            color: $red;
+          }
+          .option-change-arrow {
+            width: 3rem;
+            margin-left: 2rem;
+            @include font(1.8rem, 700, normal);
+            @include flexbox(flex, space-between, flex-start, nowrap);
+          }
+        }
+      }
+    }
+    .content {
+      @include mq_min_768 {
+        @include flexbox(flex, space-between, flex-start, nowrap);
+      }
+      .list-title {
+        margin: 2rem 0;
+        @include mq_min_768 {
+          margin: 0;
+        }
+        .title-item {
+          margin: 0.5rem 0;
+          word-wrap: break-word;
+          cursor: pointer;
+          &:hover {
+            color: $red;
+          }
+          @include mq_min_768 {
+            width: 16rem;
+            height: 100%;
+          }
+        }
+      }
+      .block-products {
+        margin: 0 -0.5rem;
+        a {
+          display: block;
+          font-size: 0;
+          padding: 0.5rem;
+        }
+        @include mq_min_969 {
+          @include flexbox(flex, space-between, flex-start, nowrap);
+        }
+        .block-products-left {
+          display: none;
+          @include mq_min_969 {
+            display: block;
+            margin-right: 0.5rem;
+          }
+        }
+        .block-products-right {
+          @include flexbox(flex, flex-start, center, wrap);
+          margin: 0 -0.5rem;
+          a {
+            width: 50%;
+            @include mq_min_969 {
+              width: calc(100% / 3);
+            }
+          }
+        }
+      }
+    }
+  }
+
+  .products-container-4 {
+    margin-top: 3rem;
+    .title-product {
+      @include font(1.6rem, 700, normal);
+      @include flexbox(flex, space-between, center, nowrap);
+      @include mq_min_768 {
+        margin-bottom: 1.5rem;
+      }
+      h3 {
+        display: inline-block;
+        padding-bottom: 0.5rem;
+        border-bottom: 3px solid $red;
+      }
+      .option-change {
+        display: none;
+        @include mq_min_768 {
+          color: $gray_3;
+          @include font(1.2rem, 700, normal);
+          @include flexbox(flex, flex-end, flex-start, nowrap);
+          span {
+            margin: 0 0.5rem;
+          }
+          .active {
+            color: $red;
+          }
+          .option-change-arrow {
+            width: 3rem;
+            margin-left: 2rem;
+            @include font(1.8rem, 700, normal);
+            @include flexbox(flex, space-between, flex-start, nowrap);
+          }
+        }
+      }
+    }
+    .content {
+      @include mq_min_768 {
+        @include flexbox(flex, space-between, flex-start, nowrap);
+      }
+      .list-title {
+        margin: 2rem 0;
+        @include mq_min_768 {
+          margin: 0;
+        }
+        .title-item {
+          margin: 0.5rem 0;
+          word-wrap: break-word;
+          cursor: pointer;
+          &:hover {
+            color: $red;
+          }
+          @include mq_min_768 {
+            width: 16rem;
+            height: 100%;
+          }
+        }
+      }
+      .block-products {
+        margin: 0 -0.5rem;
+        a {
+          display: block;
+          font-size: 0;
+          padding: 0.5rem;
+        }
+        @include mq_min_969 {
+          @include flexbox(flex, space-between, flex-start, nowrap);
+        }
+        .block-products-left {
+          display: none;
+          @include mq_min_969 {
+            display: block;
+            margin-right: 0.5rem;
+          }
+        }
+        .block-products-right {
+          @include flexbox(flex, flex-start, center, wrap);
+          margin: 0 -0.5rem;
+          a {
+            width: 50%;
+            @include mq_min_969 {
+              width: calc(100% / 3);
+            }
+          }
+        }
+      }
+    }
+  }
+
+  .products-container-5 {
+    margin-top: 3rem;
+    .title-product {
+      @include font(1.6rem, 700, normal);
+      @include flexbox(flex, space-between, center, nowrap);
+      @include mq_min_768 {
+        margin-bottom: 1.5rem;
+      }
+      h3 {
+        display: inline-block;
+        padding-bottom: 0.5rem;
+        border-bottom: 3px solid $red;
+      }
+      .option-change {
+        display: none;
+        @include mq_min_768 {
+          color: $gray_3;
+          @include font(1.2rem, 700, normal);
+          @include flexbox(flex, flex-end, flex-start, nowrap);
+          span {
+            margin: 0 0.5rem;
+          }
+          .active {
+            color: $red;
+          }
+          .option-change-arrow {
+            width: 3rem;
+            margin-left: 2rem;
+            @include font(1.8rem, 700, normal);
+            @include flexbox(flex, space-between, flex-start, nowrap);
+          }
+        }
+      }
+    }
+    .content {
+      @include mq_min_768 {
+        @include flexbox(flex, space-between, flex-start, nowrap);
+      }
+      .list-title {
+        margin: 2rem 0;
+        @include mq_min_768 {
+          margin: 0;
+        }
+        .title-item {
+          margin: 0.5rem 0;
+          word-wrap: break-word;
+          cursor: pointer;
+          &:hover {
+            color: $red;
+          }
+          @include mq_min_768 {
+            width: 16rem;
+            height: 100%;
+          }
+        }
+      }
+      .block-products {
+        margin: 0 -0.5rem;
+        a {
+          display: block;
+          font-size: 0;
+          padding: 0.5rem;
+        }
+        @include mq_min_969 {
+          @include flexbox(flex, space-between, flex-start, nowrap);
+        }
+        .block-products-left {
+          display: none;
+          @include mq_min_969 {
+            display: block;
+            margin-right: 0.5rem;
+          }
+        }
+        .block-products-right {
+          @include flexbox(flex, flex-start, center, wrap);
+          margin: 0 -0.5rem;
+          a {
+            width: 50%;
+            @include mq_min_969 {
+              width: calc(100% / 3);
+            }
+          }
+        }
+      }
+    }
+  }
+
+  .info-store {
+    margin-top: 3rem;
+    @include font(1.6rem, 700, normal);
+    h3 {
+      display: inline-block;
+      margin-bottom: 2rem;
+      padding-bottom: 0.5rem;
+      border-bottom: 3px solid $red;
+    }
+    .info-child {
+      text-align: center;
+      a {
+        display: block;
+      }
+      p {
+        margin: 1rem 0;
+      }
+      span {
+        @include font(1.4rem, 500, normal);
+      }
+    }
+  }
+
+  .trademark {
+    @include flexbox(flex, flex-start, center, wrap);
+    margin: 0 -1rem;
+    a {
+      display: block;
+      font-size: 0;
+      max-width: 50%;
+      padding: 1rem;
+      @include mq_min_768 {
+        max-width: calc(100% / 5);
+      }
+    }
+    img {
+      border: 1px solid $gray_4;
+    }
+  }
+}
