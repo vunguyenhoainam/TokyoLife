@@ -1,5 +1,5 @@
-// Handle Popup
 $(document).ready(function () {
+  // Handle Popup
   $(".popup-menu").animate({
     opacity: 0,
     marginLeft: -999,
@@ -31,6 +31,12 @@ $(document).ready(function () {
     e.preventDefault();
     $(this).next(".popup-dropdown-extend").slideToggle();
     $(this).children(".fas").toggleClass("handle-arrow");
+  });
+
+  // Back-top
+  $(".btn-go-top").click(function (e) {
+    e.preventDefault();
+    $("html").animate({ scrollTop: 0 }, 1200, "easeOutCubic");
   });
 });
 

@@ -27,7 +27,6 @@
         max-width: calc(100% / 3);
       }
       .products-right {
-        // max-width: calc(100% - (100% / 3));
         flex: 1;
         &-top {
           @include flexbox(flex, flex-start, center, nowrap);
@@ -94,6 +93,7 @@
           @include flexbox(flex, flex-end, flex-start, nowrap);
           span {
             margin: 0 0.5rem;
+            cursor: pointer;
           }
           .active {
             color: $red;
@@ -103,6 +103,7 @@
             margin-left: 2rem;
             @include font(1.8rem, 700, normal);
             @include flexbox(flex, space-between, flex-start, nowrap);
+            cursor: pointer;
           }
         }
       }
@@ -185,6 +186,7 @@
           @include flexbox(flex, flex-end, flex-start, nowrap);
           span {
             margin: 0 0.5rem;
+            cursor: pointer;
           }
           .active {
             color: $red;
@@ -194,6 +196,7 @@
             margin-left: 2rem;
             @include font(1.8rem, 700, normal);
             @include flexbox(flex, space-between, flex-start, nowrap);
+            cursor: pointer;
           }
         }
       }
@@ -272,6 +275,7 @@
           @include flexbox(flex, flex-end, flex-start, nowrap);
           span {
             margin: 0 0.5rem;
+            cursor: pointer;
           }
           .active {
             color: $red;
@@ -281,6 +285,7 @@
             margin-left: 2rem;
             @include font(1.8rem, 700, normal);
             @include flexbox(flex, space-between, flex-start, nowrap);
+            cursor: pointer;
           }
         }
       }
@@ -359,6 +364,7 @@
           @include flexbox(flex, flex-end, flex-start, nowrap);
           span {
             margin: 0 0.5rem;
+            cursor: pointer;
           }
           .active {
             color: $red;
@@ -368,6 +374,7 @@
             margin-left: 2rem;
             @include font(1.8rem, 700, normal);
             @include flexbox(flex, space-between, flex-start, nowrap);
+            cursor: pointer;
           }
         }
       }
@@ -446,6 +453,7 @@
           @include flexbox(flex, flex-end, flex-start, nowrap);
           span {
             margin: 0 0.5rem;
+            cursor: pointer;
           }
           .active {
             color: $red;
@@ -455,6 +463,7 @@
             margin-left: 2rem;
             @include font(1.8rem, 700, normal);
             @include flexbox(flex, space-between, flex-start, nowrap);
+            cursor: pointer;
           }
         }
       }
@@ -536,7 +545,7 @@
   }
 
   .trademark {
-    @include flexbox(flex, flex-start, center, wrap);
+    @include flexbox(flex, space-between, center, wrap);
     margin: 0 -1rem;
     a {
       display: block;
